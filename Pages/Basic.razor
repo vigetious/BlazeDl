@@ -1,0 +1,12 @@
+﻿@page "/basic"
+
+<h1>Basic</h1>
+
+<EditForm Model="@basic" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <p>Video URL: </p><InputText id="videoUrl" @bind-Value="basic.VideoUrl"/><br/>
+    <p>Directory: </p><InputText id="directory" @bind-Value="basic.Directory"/>
+    <button type="submit">Submit</button>
+    <p>@done</p>
+</EditForm>
